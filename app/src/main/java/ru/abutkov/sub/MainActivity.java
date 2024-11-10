@@ -107,6 +107,9 @@ public class MainActivity extends AppCompatActivity implements SubscriptionAdapt
         EditText editTextPaymentAmount = view.findViewById(R.id.editTextPaymentAmount);
         Spinner spinnerFrequency = view.findViewById(R.id.spinnerFrequency);
 
+        // Запрещаем ручной ввод даты
+        editTextPaymentDate.setKeyListener(null);
+
         editTextPaymentDate.setOnClickListener(v -> showDatePickerDialog(editTextPaymentDate));
 
         AlertDialog dialog = builder.create();
@@ -160,6 +163,7 @@ public class MainActivity extends AppCompatActivity implements SubscriptionAdapt
         dialog.show();
     }
 
+
     private void showEditSubscriptionDialog(SubEntity subscription) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Редактировать подписку");
@@ -171,6 +175,9 @@ public class MainActivity extends AppCompatActivity implements SubscriptionAdapt
         EditText editTextPaymentDate = view.findViewById(R.id.editTextPaymentDate);
         EditText editTextPaymentAmount = view.findViewById(R.id.editTextPaymentAmount);
         Spinner spinnerFrequency = view.findViewById(R.id.spinnerFrequency);
+
+        // Запрещаем ручной ввод даты
+        editTextPaymentDate.setKeyListener(null);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.frequency_options, android.R.layout.simple_spinner_item);
@@ -257,6 +264,8 @@ public class MainActivity extends AppCompatActivity implements SubscriptionAdapt
             calendar.set(year, month, dayOfMonth);
             editText.setText(dateFormat.format(calendar.getTime()));
         }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+
+        datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis()); // Только до сегодняшней даты включительно
         datePickerDialog.show();
     }
 }
