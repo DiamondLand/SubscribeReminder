@@ -3,6 +3,7 @@ package ru.abutkov.sub;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -242,7 +243,10 @@ public class MainActivity extends AppCompatActivity implements SubscriptionAdapt
             subscriptionList.remove(subscription);
             subscriptionAdapter.notifyDataSetChanged();
             dialog.dismiss();
+
+            Toast.makeText(MainActivity.this, "Подписка удалена", Toast.LENGTH_SHORT).show();
         });
+
 
         dialog.show();
     }

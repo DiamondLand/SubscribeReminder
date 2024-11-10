@@ -6,7 +6,9 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="12dp"
-    app:cardElevation="6dp">
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,6 +24,7 @@
             android:text="Название сервиса"
             android:textAppearance="?attr/textAppearanceHeadline6"
             android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
             android:paddingBottom="4dp" />
 
         <!-- Дата следующего платежа -->
