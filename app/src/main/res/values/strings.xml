@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">sub</string>
+    <string-array name="frequency_options">
+        <item>Ежемесячно</item>
+        <item>Ежегодно</item>
+    </string-array>
+</resources>

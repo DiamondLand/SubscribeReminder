@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Название сервиса -->
+        <TextView
+            android:id="@+id/tvServiceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название сервиса"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@android:color/darker_gray"
+            android:paddingBottom="4dp" />
+
+        <!-- Дата следующего платежа -->
+        <TextView
+            android:id="@+id/tvPaymentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дата платежа: 15-08-2024"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="@android:color/darker_gray" />
+
+        <!-- Сумма платежа -->
+        <TextView
+            android:id="@+id/tvPaymentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сумма: 99.99 ₽"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="#800080"
+            android:paddingTop="8dp" />
+
+        <!-- Периодичность подписки -->
+        <TextView
+            android:id="@+id/tvFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ежемесячная"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
