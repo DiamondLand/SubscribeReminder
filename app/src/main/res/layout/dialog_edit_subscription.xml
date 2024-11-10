@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:hint="Дата платежа (dd-MM-yyyy)"
+        android:hint="Дата следующего платежа"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/editTextPaymentAmount"
         app:layout_constraintEnd_toEndOf="parent"
